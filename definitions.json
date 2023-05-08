@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "IF": {
+      "name": "If",
+      "arguments": [
+        {
+          "type": "unify",
+          "name": "Condition",
+          "evaluate": true
+        },
+        {
+          "type": "unify",
+          "evaluate": false,
+          "name": "Action"
+        }
+      ]
+    }
+  }
+}
