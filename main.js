@@ -24,6 +24,7 @@ export class App {
       if (!api) api = await import("../../public/api.js");
       for (let arg in action.arguments) {
         action.arguments[arg] = await this.inputApi.resolveInput(
+          config.pwd,
           action.arguments[arg]
         );
       }
