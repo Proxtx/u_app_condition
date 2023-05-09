@@ -11,7 +11,11 @@ export class App {
   }
 
   async init() {
-    this.inputApi = await genCombine(this.config.input, "api", genModule);
+    this.inputApi = await genCombine(
+      this.config.input,
+      "public/api.js",
+      genModule
+    );
   }
 
   async IF(condition, action) {
