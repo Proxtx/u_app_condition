@@ -7,7 +7,6 @@ let api;
 export class App {
   constructor(config) {
     this.config = config;
-    this.initPromise = this.init();
   }
 
   async init() {
@@ -19,7 +18,7 @@ export class App {
   }
 
   async IF(condition, action) {
-    await this.initPromise;
+    if (!this.inputApi) await this.init();
     if (condition) {
       if (!api) api = await import("../../public/api.js");
       for (let arg in action.arguments) {
